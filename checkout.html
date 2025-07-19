@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bike Checkout</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  color: #333;
+  margin: 0;
+  padding: 2rem;
+}
+
+.checkout-container {
+  max-width: 500px;
+  margin: auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.bike-details img {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  margin-bottom: 1rem;
+  color: #ff6600;
+}
+
+.whatsapp-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  background-color: #25D366;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  background-color: #1ebe5d;
+}
+
+  </style>
+</head>
+<body>
+  <div class="checkout-container">
+    <h1>Bike Checkout</h1>
+    <div class="bike-details">
+      <img id="bikeImage" src="" alt="Bike" />
+      <h2 id="bikeModel"></h2>
+      <p><strong>Rent/Hour:</strong> ₹<span id="rent"></span></p>
+      <p><strong>Mileage:</strong> <span id="mileage"></span> km/l</p>
+    </div>
+    <a id="whatsappShare" class="whatsapp-btn" target="_blank">Share on WhatsApp</a>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const bike = {
+      model: params.get("model"),
+      rent: params.get("rent"),
+      mileage: params.get("mileage"),
+      image: params.get("image")
+    };
+
+    document.getElementById("bikeModel").textContent = bike.model;
+    document.getElementById("rent").textContent = bike.rent;
+    document.getElementById("mileage").textContent = bike.mileage;
+    document.getElementById("bikeImage").src = bike.image;
+
+    const whatsappMessage = `Check out this bike on Two Wheels One Ride 🚴‍♂️\nModel: ${bike.model}\nRent: ₹${bike.rent}/hr\nMileage: ${bike.mileage} km/l`;
+    document.getElementById("whatsappShare").href = `https://wa.me/?text=${encodeURIComponent(whatsappMessage)}`;
+  </script>
+
+
+<script>
+  function openMenu() {
+    document.getElementById('mobileNav').classList.add('active');
+  }
+
+  function closeMenu() {
+    document.getElementById('mobileNav').classList.remove('active');
+  }
+</script>
+</body>
+</html>

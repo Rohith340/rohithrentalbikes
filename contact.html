@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Two Wheels One Ride - Contact</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+ <!-- Navbar HTML -->
+<header class="new-navbar">
+  <!-- Left links -->
+  <div class="navbar-links">
+    <a href="/index.html">Home</a>
+    <a href="#Bikes">Bikes Available</a>
+    <a href="/about.html">About Us</a>
+  </div>
+
+  <!-- Center logo -->
+  <div class="navbar-logo">Two Wheels One Ride</div>
+
+  <!-- Right contact button -->
+  <div class="navbar-right">
+    <a href="/contact.html" class="contact-btn">Contact Us</a>
+  </div>
+
+  <!-- Hamburger (mobile) -->
+  <div class="hamburger" onclick="openMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+</header>
+
+<!-- Mobile Fullscreen Menu -->
+<div class="mobile-nav-overlay" id="mobileNav">
+  <div class="close-icon" onclick="closeMenu()">&times;</div>
+  <div class="mobile-links">
+    <a href="/index.html" onclick="closeMenu()">Home</a>
+    <a href="#Bikes" onclick="closeMenu()">Bikes Available</a>
+    <a href="/about.html" onclick="closeMenu()">About Us</a>
+    <a href="/contact.html" class="contact-btn" onclick="closeMenu()">Contact Us</a>
+  </div>
+</div>
+
+
+  <!-- Contact Section -->
+  <section class="contact-section" id="contact">
+    <div class="contact-card">
+      <h2 class="contact-title">Get in Touch</h2>
+      <p class="contact-subtitle">Have questions or want to rent a bike? We'd love to hear from you.</p>
+      
+      <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="87fb97cb-d85a-4121-8bb6-8d762c106027">
+        <input type="hidden" name="subject" value="New Contact Message from Website">
+        <input type="hidden" name="redirect" value="thank-you.html">
+
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+
+        <button type="submit" class="contact-btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="cta-container">
+      <h2 class="cta-title">Ready for Your Next Adventure?</h2>
+      <p class="cta-subtitle">Choose from our premium bikes and hit the road today. Hassle-free rentals, full gear included.</p>
+      <a href="#bikes" class="cta-button">Browse Bikes</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <ul class="footer-nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#bikes">Bikes Available</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+      <ul class="footer-social">
+        <li><a href="https://www.facebook.com/share/1AWcvggALJ/"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="https://www.instagram.com/t.rohith45/"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="https://x.com/ThalacheruR9999"><i class="fab fa-x-twitter"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/thalacheru-rohith-935571370"><i class="fab fa-linkedin-in"></i></a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <p class="tagline">Built by <strong style="font-style: italic;">Rohith Thalacheru</strong></p>
+    </div>
+  </footer>
+
+
+  <script>
+  function openMenu() {
+    document.getElementById('mobileNav').classList.add('active');
+  }
+
+  function closeMenu() {
+    document.getElementById('mobileNav').classList.remove('active');
+  }
+</script>
+
+</body>
+</html>

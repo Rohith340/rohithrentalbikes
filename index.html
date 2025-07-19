@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Two Wheels One Ride</title>
+  <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+      
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+ <!-- Navbar HTML -->
+<header class="new-navbar">
+  <!-- Left links -->
+  <div class="navbar-links">
+    <a href="/index.html">Home</a>
+    <a href="#Bikes">Available  Bikes</a>
+    <a href="/about.html">About Us</a>
+  </div>
+
+  <!-- Center logo -->
+  <div class="navbar-logo">Two Wheels One Ride</div>
+
+  <!-- Right contact button -->
+  <div class="navbar-right">
+    <a href="/contact.html" class="contact-btn">Contact Us</a>
+  </div>
+
+  <!-- Hamburger (mobile) -->
+  <div class="hamburger" onclick="openMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+</header>
+
+<!-- Mobile Fullscreen Menu -->
+<div class="mobile-nav-overlay" id="mobileNav">
+  <div class="close-icon" onclick="closeMenu()">&times;</div>
+  <div class="mobile-links">
+    <a href="/index.html" onclick="closeMenu()">Home</a>
+    <a href="#Bikes" onclick="closeMenu()">Bikes Available</a>
+    <a href="/about.html" onclick="closeMenu()">About Us</a>
+    <a href="/contact.html" class="contact-btn" onclick="closeMenu()">Contact Us</a>
+  </div>
+</div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Ride into Freedom</h1>
+        <p>Unlock your next journey with our stylish and eco-friendly bikes.</p>
+        <a href="#Bikes" class="hero-btn">Start Riding</a>
+      </div>
+      <div class="hero-image">
+        <img src="Assets/hero.jpg" alt="Bike Image" />
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+<section class="bike-cards-section" id="Bikes">
+  <h2 class="section-title">Our Top Bikes</h2>
+  <div class="bike-cards-grid">
+
+    <div class="bike-card">
+      <img src="/Assets/pulsar150.jpg" alt="Mountain Explorer" class="bike-img">
+      <h3 class="bike-title">Mountain Explorer</h3>
+      <p class="bike-desc">Conquer rugged trails with this all-terrain mountain bike.</p>
+      <a href="#" class="bike-btn" onclick="sendToWhatsApp('Mountain Explorer', '₹90/hr', '40 kmpl')">Rent Now</a>
+    </div>
+
+    <div class="bike-card">
+      <img src="/Assets/duke.jpg" alt="Speed Rider" class="bike-img">
+      <h3 class="bike-title">Speed Rider</h3>
+      <p class="bike-desc">Engineered for speed, perfect for long-distance road rides.</p>
+      <a href="#" class="bike-btn" onclick="sendToWhatsApp('Speed Rider', '₹120/hr', '35 kmpl')">Rent Now</a>
+    </div>
+
+    <div class="bike-card">
+      <img src="/Assets/Gt650.jpg" alt="Urban Cruiser" class="bike-img">
+      <h3 class="bike-title">Urban Cruiser</h3>
+      <p class="bike-desc">Smooth and stylish ride for daily city commutes.</p>
+      <a href="#" class="bike-btn" onclick="sendToWhatsApp('Urban Cruiser', '₹100/hr', '38 kmpl')">Rent Now</a>
+    </div>
+
+    <div class="bike-card">
+      <img src="/Assets/rx 100.jpg" alt="E-Glide" class="bike-img">
+      <h3 class="bike-title">E-Glide</h3>
+      <p class="bike-desc">Enjoy an effortless ride with this electric-powered bike.</p>
+      <a href="#" class="bike-btn" onclick="sendToWhatsApp('E-Glide', '₹150/hr', 'Electric (0 kmpl)')">Rent Now</a>
+    </div>
+
+    <div class="bike-card">
+      <img src="/Assets/Mt 15.jpg" alt="Hybrid Pro" class="bike-img">
+      <h3 class="bike-title">Hybrid Pro</h3>
+      <p class="bike-desc">A versatile bike built for both trails and city streets.</p>
+      <a href="#" class="bike-btn" onclick="sendToWhatsApp('Hybrid Pro', '₹110/hr', '42 kmpl')">Rent Now</a>
+    </div>
+
+    <div class="bike-card">
+      <img src="/Assets/rr310.jpg" alt="Retro Rider" class="bike-img">
+      <h3 class="bike-title">Retro Rider</h3>
+      <p class="bike-desc">Classic charm meets comfort in this vintage beauty.</p>
+      <a href="#" class="bike-btn" onclick="sendToWhatsApp('Retro Rider', '₹95/hr', '41 kmpl')">Rent Now</a>
+    </div>
+
+    <div class="bike-card">
+      <img src="/Assets/rc390.jpg" alt="Street Jumper" class="bike-img">
+      <h3 class="bike-title">Street Jumper</h3>
+      <p class="bike-desc">Built for tricks, jumps, and urban playgrounds.</p>
+      <a href="#" class="bike-btn" onclick="sendToWhatsApp('Street Jumper', '₹130/hr', '30 kmpl')">Rent Now</a>
+    </div>
+
+    <div class="bike-card">
+      <img src="/Assets/royal.jpg" alt="FoldGo" class="bike-img">
+      <h3 class="bike-title">FoldGo</h3>
+      <p class="bike-desc">Portable and compact — ideal for city travelers.</p>
+      <a href="#" class="bike-btn" onclick="sendToWhatsApp('FoldGo', '₹85/hr', '45 kmpl')">Rent Now</a>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+<section class="special-section">
+  <h2 class="special-title">Why Our Bikes Are Special</h2>
+  <div class="special-features">
+    
+    <div class="feature-box">
+      <span class="feature-icon">⚡</span>
+      <h3 class="feature-title">Electric Assist</h3>
+      <p class="feature-desc">Many models include electric motors for effortless long-distance travel.</p>
+    </div>
+
+    <div class="feature-box">
+      <span class="feature-icon">🔧</span>
+      <h3 class="feature-title">Regular Maintenance</h3>
+      <p class="feature-desc">All bikes are serviced weekly to ensure top-notch performance and safety.</p>
+    </div>
+
+    <div class="feature-box">
+      <span class="feature-icon">🛡️</span>
+      <h3 class="feature-title">Safety First</h3>
+      <p class="feature-desc">Every ride includes helmets, lights, and anti-theft locks — free of charge.</p>
+    </div>
+
+    <div class="feature-box">
+      <span class="feature-icon">🌱</span>
+      <h3 class="feature-title">Eco Friendly</h3>
+      <p class="feature-desc">Zero-emission rides that help reduce traffic and pollution.</p>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<!-- logo Section -->
+  <section class="scrolling-logo-section">
+  <div class="logo-track">
+    <img src="Assets/ktm.png" alt="Logo 1" class="logo-img">
+    <img src="Assets/suzuki.png" alt="Logo 2" class="logo-img">
+    <img src="Assets/Honda.png" alt="Logo 3" class="logo-img">
+    <img src="Assets/hero honda.png" alt="Logo 4" class="logo-img">
+    <img src="Assets/royal enfield.jpg" alt="Logo 5" class="logo-img">
+
+    <!-- Duplicate the logos for seamless infinite scroll -->
+    <img src="Assets/TVS.png" alt="Logo 1" class="logo-img">
+    <img src="Assets/bajaj.webp" alt="Logo 2" class="logo-img">
+    <img src="Assets/yamaha.webp" alt="Logo 3" class="logo-img">
+    <img src="Assets/kawasaki.png" alt="Logo 4" class="logo-img">
+    <img src="Assets/jawa.png" alt="Logo 5" class="logo-img">
+  </div>
+</section>
+
+
+
+
+
+<section class="cta-section">
+  <div class="cta-container">
+    <h2 class="cta-title">Ready for Your Next Adventure?</h2>
+    <p class="cta-subtitle">Choose from our premium bikes and hit the road today. Hassle-free rentals, full gear included.</p>
+    <a href="#bikes" class="cta-button">Browse Bikes</a>
+  </div>
+</section>
+
+
+
+
+    
+
+<!-- Footer Section -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <!-- Navigation Links -->
+    <ul class="footer-nav">
+      <li><a href="/">Home</a></li>
+      <li><a href="#Bikes">Bikes Available</a></li>
+      <li><a href="/about.html">About Us</a></li>
+      <li><a href="/contact.html">Contact Us</a></li>
+    </ul>
+
+    <!-- Social Media Icons -->
+    <ul class="footer-social">
+      <li><a href="https://www.facebook.com/share/1AWcvggALJ/"><i class="fab fa-facebook-f"></i></a></li>
+      <li><a href="https://www.instagram.com/t.rohith45/"><i class="fab fa-instagram"></i></a></li>
+      <li><a href="https://x.com/ThalacheruR9999?t=7iezgkR4ZOuhc-intBRMkw&s=09"><i class="fab fa-x-twitter"></i></a></li>
+      <li><a href="https://www.linkedin.com/in/thalacheru-rohith-935571370?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a></li>
+    </ul>
+  </div>
+
+  <!-- Tagline -->
+  <div class="footer-bottom">
+    <p class="tagline">Built by <strong style="font-style: italic;">Rohith Thalacheru</strong> </p>
+
+  </div>
+</footer>
+
+
+
+<script>
+  function openMenu() {
+    document.getElementById('mobileNav').classList.add('active');
+  }
+
+  function closeMenu() {
+    document.getElementById('mobileNav').classList.remove('active');
+  }
+</script>
+
+
+
+
+<script>
+  const track = document.getElementById('logoTrack');
+  const dotsContainer = document.getElementById('dots');
+  const logos = track.children;
+  const total = logos.length;
+  let index = 0;
+
+  // Create dots
+  for (let i = 0; i < total; i++) {
+    const dot = document.createElement('span');
+    dot.classList.add('dot');
+    if (i === 0) dot.classList.add('active');
+    dotsContainer.appendChild(dot);
+  }
+  const dots = dotsContainer.querySelectorAll('.dot');
+
+  // Auto slide every 2 seconds
+  setInterval(() => {
+    index = (index + 1) % total;
+    track.style.transform = `translateX(-${index * 100}%)`;
+    updateDots();
+  }, 2000);
+
+  // Update active dot
+  function updateDots() {
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === index);
+    });
+  }
+
+  // Click on dots to jump to slide
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      index = i;
+      track.style.transform = `translateX(-${index * 100}%)`;
+      updateDots();
+    });
+  });
+</script>
+
+<script>
+  function sendToWhatsApp(model, rent, mileage) {
+    const phoneNumber = "+919347900712"; // 🔁 Replace with your real number (no +)
+    const message = `🚴 *Bike Rental Request* 🚴%0A
+*Model:* ${model}%0A
+*Rent:* ${rent}%0A
+*Mileage:* ${mileage}%0A
+%0AI'm interested in renting this bike. Please share more details.`;
+
+    const url = `https://wa.me/${phoneNumber}?text=${message}`;
+    window.open(url, "_blank");
+  }
+</script>
+
+
+</body>
+</html>
